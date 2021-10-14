@@ -100,7 +100,7 @@ const About = () => {
             >
               Education
             </li>
-            {/* <li
+            <li
               className={activetabIndex === 3 ? "tab active activeText" : "tab"}
               id="cert-head"
               style={
@@ -111,7 +111,7 @@ const About = () => {
               onClick={() => viewTab(3)}
             >
               Certification
-            </li> */}
+            </li>
           </ul>
 
           {activetabIndex === 0 && (
@@ -141,14 +141,14 @@ const About = () => {
                 onClick={()=>window.open('https://www.techversantinfotech.com/')}
               >
                 <h3>Software Engineer</h3>
-                <p>Techversant</p>
+                <p>Techversant : 2021 - Present</p>
               </div>
               <div
                 className="tab-content link"
                 onClick={()=>window.open('http://www.interlandtech.com/')}
               >
                 <h3>Software Developer</h3>
-                <p>Interland Technolgy Services</p>
+                <p>Interland Technolgy Services : 2019 - 2021</p>
               </div>
             </div>
           )}
@@ -179,26 +179,19 @@ const About = () => {
           )}
           {activetabIndex === 3 && (
             <div className="tab-contents certification">
-              <div
+                <div
                 className="tab-content link"
-                onClick={()=>window.open('https://www.hackerrank.com/certificates/93b9181c553a')}
+                onClick={()=>window.open('https://photos.app.goo.gl/ffsoNGysZ5G57hPY6')}
               >
-                <h3>React Certification</h3>
-                <p>HackerRank</p>
+                <h3>Rising Star Award (Most Valuable Fresher)</h3>
+                <p>INTERLAND TECHNOLOGY SERVICES : 2020</p>
               </div>
               <div
                 className="tab-content link"
-                onClick={()=>window.open('https://google.com')}
+                onClick={()=>window.open('https://nptel.ac.in/noc/Ecertificate/?q=linkedin/noc17-cs06/NPTEL17CS0626300170FN.jpg')}
               >
-                <h3>JavaScript Algorithms and Data Structures</h3>
-                <p>freeCodeCamp.org</p>
-              </div>
-              <div
-                className="tab-content link"
-                onClick={()=>window.open('https://google.com')}
-              >
-                <h3>Responsive Web Design</h3>
-                <p>freeCodeCamp.org</p>
+                <h3>Introduction to Modern Application Development </h3>
+                <p>NPTEL : 2017</p>
               </div>
             </div>
           )}

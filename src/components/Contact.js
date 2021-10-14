@@ -26,7 +26,7 @@ const Contact = () => {
                 <textarea required placeholder="Your Message" name="message" className="input" id="message"></textarea>
 
 
-                <button className="submit btn" type="submit">Send Mail</button>
+                <button className="submit btn" type="submit" disabled>Send Mail</button>
 
             </form>
 

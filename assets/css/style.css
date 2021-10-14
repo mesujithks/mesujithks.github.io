@@ -6,7 +6,7 @@ Start Date : 09-02-2020
 last modified: 15-12-2020 by Sujith K S
 author: Sujith K S
 email: mesujithks3@gmail.com
-website: https://google.com/
+website: https://mesujithks.github.io/
 ----------------------------------------------------------*/
 
 * {
@@ -1173,9 +1173,9 @@ input:-webkit-autofill {
     color: var(--dim-white);
     margin-bottom: 20px;
   }
-  .contact-container {
+  /* .contact-container {
     padding: 0 7vw;
-  }
+  } */
 }
 
 @media only screen and (max-width: 400px) {

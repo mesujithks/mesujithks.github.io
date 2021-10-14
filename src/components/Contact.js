@@ -14,13 +14,13 @@ const Contact = () => {
 
                 <h3 className="form-head">Send Me A Note</h3>
 
-                <input required placeholder="Name" className="input" type="text" name="name" id="name" autocomplete="off" />
+                <input required placeholder="Name" className="input" type="text" name="name" id="name" autoComplete="off" />
 
 
                 <input required placeholder="Email Address" className="input" type="email" name="email" id="email"
-                    autocomplete="off" />
+                    autoComplete="off" />
 
-                <input placeholder="Subject" className="input" type="text" name="subject" id="subject" autocomplete="off" />
+                <input placeholder="Subject" className="input" type="text" name="subject" id="subject" autoComplete="off" />
 
 
                 <textarea required placeholder="Your Message" name="message" className="input" id="message"></textarea>
@@ -31,7 +31,7 @@ const Contact = () => {
             </form>
 
             <div className="contact-details">
-                <div className="contact-container phone" onclick="window.open('tel:+919*********3');">
+                <div className="contact-container phone" onClick={()=>window.open('tel:+919*********3')}>
                     <div className="contact-icon">
                         <i className="fa fa-phone"></i>
                     </div>
@@ -40,7 +40,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="contact-container mail-id" onclick="window.open('mailto:mesujithks3@gmail.com');">
+                <div className="contact-container mail-id" onClick={()=>window.open('mailto:mesujithks3@gmail.com')}>
                     <div className="contact-icon">
                         <i className="fa fa-envelope"></i>
                     </div>

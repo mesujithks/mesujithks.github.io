@@ -68,37 +68,4 @@ $(document).ready(() => {
   });
 
 
-  //Hiding extra cards in Portfolio
-  $('.view-more').click(() => {
-    let txt = $('#view-more-content').text();
-
-    if (txt == "View More") {
-      $('#view-more-content').text('View Less')
-
-      $('.hidden-card').css({ display: "block" });
-    }
-    else {
-      $('#view-more-content').text('View More');
-
-      $('.hidden-card').css({ display: "none" });
-    }
-  })
-
 });
-
-
-
-function viewProjectTab(tabName, tabHead) {
-
-  let noOfProjects = $('.' + tabName + '> .project-card').length;
-
-  noOfProjects >= 3 ? $('.view-more').css({ display: "flex" }) : $('.view-more').css({ display: "none" });
-
-
-  $('.project-tab').removeClass('active-project');
-  $('#' + tabHead).toggleClass('active-project');
-
-  $('.project-content').css({ display: "none" });
-  $('.' + tabName).css({ display: "grid" });
-
-}

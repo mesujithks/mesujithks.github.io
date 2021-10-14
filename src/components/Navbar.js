@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <Router>
       <nav className="nav-bar">
-        <header id="logo" onclick="window.location.href = '#';">
+        <header id="logo" onClick={()=>window.location.href = '#'}>
           <h3>
             &lt;/<span>Sujith</span>&gt;
           </h3>
@@ -30,7 +30,7 @@ const Navbar = () => {
             id="nav-btn"
             target="_blank"
             rel="noopener"
-            onclick="window.open('mailto:mesujithks3@gmail.com');"
+            onClick={()=>window.open('mailto:mesujithks3@gmail.com')}
           >
             <p>Let's Talk</p>
           </div>

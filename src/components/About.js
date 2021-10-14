@@ -138,14 +138,14 @@ const About = () => {
             <div className="tab-contents experience">
               <div
                 className="tab-content link"
-                onclick="window.open('https://www.techversantinfotech.com/');"
+                onClick={()=>window.open('https://www.techversantinfotech.com/')}
               >
                 <h3>Software Engineer</h3>
                 <p>Techversant</p>
               </div>
               <div
                 className="tab-content link"
-                onclick="window.open('http://www.interlandtech.com/');"
+                onClick={()=>window.open('http://www.interlandtech.com/')}
               >
                 <h3>Software Developer</h3>
                 <p>Interland Technolgy Services</p>
@@ -156,21 +156,21 @@ const About = () => {
             <div className="tab-contents education">
               <div
                 className="tab-content link"
-                onclick="window.open('http://www.cectl.ac.in/');"
+                onClick={()=>window.open('http://www.cectl.ac.in/')}
               >
                 <h3>B.Tech, Computer Science and Engineering</h3>
                 <p>College of Engineering Cherthala : 2015-2019</p>
               </div>
               <div
                 className="tab-content link"
-                onclick="window.open('https://goo.gl/maps/t6g7cUmn6u1D7BJH6');"
+                onClick={()=>window.open('https://goo.gl/maps/t6g7cUmn6u1D7BJH6')}
               >
                 <h3>Higher Secondary Education</h3>
                 <p>S.D.P.Y.H.S.S Palluruthy : 2013-2015</p>
               </div>
               <div
                 className="tab-content link"
-                onclick="window.open('https://goo.gl/maps/t6g7cUmn6u1D7BJH6');"
+                onClick={()=>window.open('https://goo.gl/maps/t6g7cUmn6u1D7BJH6')}
               >
                 <h3>High School</h3>
                 <p>S.D.P.Y.B.H.S.S Palluruthy : 2013</p>
@@ -181,21 +181,21 @@ const About = () => {
             <div className="tab-contents certification">
               <div
                 className="tab-content link"
-                onclick="window.open('https://www.hackerrank.com/certificates/93b9181c553a');"
+                onClick={()=>window.open('https://www.hackerrank.com/certificates/93b9181c553a')}
               >
                 <h3>React Certification</h3>
                 <p>HackerRank</p>
               </div>
               <div
                 className="tab-content link"
-                onclick="window.open('https://google.com');"
+                onClick={()=>window.open('https://google.com')}
               >
                 <h3>JavaScript Algorithms and Data Structures</h3>
                 <p>freeCodeCamp.org</p>
               </div>
               <div
                 className="tab-content link"
-                onclick="window.open('https://google.com');"
+                onClick={()=>window.open('https://google.com')}
               >
                 <h3>Responsive Web Design</h3>
                 <p>freeCodeCamp.org</p>

@@ -32,6 +32,10 @@
   color: var(--red);
 }
 
+.Toastify__toast-body{
+  font-size: 1.4rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,9 +1,76 @@
 import React from "react";
 
 const About = () => {
+  const aboutData = [
+    {
+      title: "Java Development",
+      subTitle: "Develop Spring Framework based Java Applications",
+      type: 0,
+      link: null,
+    },
+    {
+      title: "Web Development",
+      subTitle: "Creating optimized & responsive websites/webapps",
+      type: 0,
+      link: null,
+    },
+    {
+      title: "Adaptability",
+      subTitle:
+        "Loves to learn new interesting Technologies. I have the basic knowldge in Flutter, Docker & Kubernetes",
+      type: 0,
+      link: null,
+    },
+    {
+      title: "Software Engineer",
+      subTitle: "Techversant : 2021 - Present",
+      type: 1,
+      link: "https://www.techversantinfotech.com/",
+    },
+    {
+      title: "Software Developer",
+      subTitle: "Interland Technolgy Services : 2019 - 2021",
+      type: 1,
+      link: "http://www.interlandtech.com/",
+    },
+    {
+      title: "B.Tech, Computer Science and Engineering",
+      subTitle: "College of Engineering Cherthala : 2015-2019",
+      type: 2,
+      link: "http://www.cectl.ac.in/",
+    },
+    {
+      title: "Higher Secondary Education",
+      subTitle: "S.D.P.Y.H.S.S Palluruthy : 2013-2015",
+      type: 2,
+      link: "https://goo.gl/maps/R48AS9pivfgpxsLp9",
+    },
+    {
+      title: "High School",
+      subTitle: "S.D.P.Y.B.H.S.S Palluruthy : 2013",
+      type: 2,
+      link: "https://goo.gl/maps/R48AS9pivfgpxsLp9",
+    },
+    {
+      title: "Rising Star Award (Most Valuable Fresher)",
+      subTitle: "INTERLAND TECHNOLOGY SERVICES : 2020",
+      type: 3,
+      link: "https://photos.app.goo.gl/ffsoNGysZ5G57hPY6",
+    },
+    {
+      title: "Introduction to Modern Application Development",
+      subTitle: "NPTEL : 2017",
+      type: 3,
+      link: "https://nptel.ac.in/noc/Ecertificate/?q=linkedin/noc17-cs06/NPTEL17CS0626300170FN.jpg",
+    },
+  ];
+
   const [activetabIndex, setActivetabIndex] = React.useState(0);
 
+  const [aboutDataList, setAboutDataList] = React.useState(aboutData.filter((item) => item.type === activetabIndex));
+
   const viewTab = (currentIndex) => {
+    setAboutDataList(aboutData.filter((item) => item.type === currentIndex));
     setActivetabIndex(currentIndex);
   };
 
@@ -114,87 +181,22 @@ const About = () => {
             </li>
           </ul>
 
-          {activetabIndex === 0 && (
-            <div className="tab-contents skills" id="skills">
-              <div className="tab-content">
-                <h3>Java Development</h3>
-                <p>Develop Spring Framework based Java Applications</p>
-              </div>
-              <div className="tab-content">
-                <h3>Web Development</h3>
-                <p>Creating optimized & responsive websites/webapps</p>
-              </div>
-              <div className="tab-content">
-                <h3>Adaptability</h3>
-                <p>
-                  Loves to learn new interesting Technologies. I have the basic
-                  knowldge in Flutter, Docker & Kubernetes
-                </p>
-              </div>
-            </div>
-          )}
-
-          {activetabIndex === 1 && (
-            <div className="tab-contents experience">
-              <div
-                className="tab-content link"
-                onClick={()=>window.open('https://www.techversantinfotech.com/')}
-              >
-                <h3>Software Engineer</h3>
-                <p>Techversant : 2021 - Present</p>
-              </div>
-              <div
-                className="tab-content link"
-                onClick={()=>window.open('http://www.interlandtech.com/')}
-              >
-                <h3>Software Developer</h3>
-                <p>Interland Technolgy Services : 2019 - 2021</p>
-              </div>
-            </div>
-          )}
-          {activetabIndex === 2 && (
-            <div className="tab-contents education">
-              <div
-                className="tab-content link"
-                onClick={()=>window.open('http://www.cectl.ac.in/')}
-              >
-                <h3>B.Tech, Computer Science and Engineering</h3>
-                <p>College of Engineering Cherthala : 2015-2019</p>
-              </div>
-              <div
-                className="tab-content link"
-                onClick={()=>window.open('https://goo.gl/maps/t6g7cUmn6u1D7BJH6')}
-              >
-                <h3>Higher Secondary Education</h3>
-                <p>S.D.P.Y.H.S.S Palluruthy : 2013-2015</p>
-              </div>
-              <div
-                className="tab-content link"
-                onClick={()=>window.open('https://goo.gl/maps/t6g7cUmn6u1D7BJH6')}
-              >
-                <h3>High School</h3>
-                <p>S.D.P.Y.B.H.S.S Palluruthy : 2013</p>
-              </div>
-            </div>
-          )}
-          {activetabIndex === 3 && (
-            <div className="tab-contents certification">
+          <div className="tab-contents experience">
+            {aboutDataList.map((item, index) => {
+              return (
                 <div
-                className="tab-content link"
-                onClick={()=>window.open('https://photos.app.goo.gl/ffsoNGysZ5G57hPY6')}
-              >
-                <h3>Rising Star Award (Most Valuable Fresher)</h3>
-                <p>INTERLAND TECHNOLOGY SERVICES : 2020</p>
-              </div>
-              <div
-                className="tab-content link"
-                onClick={()=>window.open('https://nptel.ac.in/noc/Ecertificate/?q=linkedin/noc17-cs06/NPTEL17CS0626300170FN.jpg')}
-              >
-                <h3>Introduction to Modern Application Development </h3>
-                <p>NPTEL : 2017</p>
-              </div>
-            </div>
-          )}
+                  className={
+                    item.link !== null ? "tab-content link" : "tab-content"
+                  }
+                  key={index}
+                  onClick={item.link !== null ? () => window.open(item.link) : null}
+                >
+                  <h3>{item.title}</h3>
+                  <p>{item.subTitle}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

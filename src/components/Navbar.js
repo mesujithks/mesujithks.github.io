@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Link, HashRouter } from "react-router-dom";
+import { Switch, Route, Link, HashRouter, Redirect } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Portfolio from "./Portfolio";
@@ -60,9 +60,13 @@ const Navbar = () => {
         <Route path="/portfolio">
           <Portfolio />
         </Route>
-        <Route path="/">
+        <Route path="/home">
           <Home />
         </Route>
+        <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
+        <Redirect from='*' to='/home' />
       </Switch>
     </HashRouter>
   );

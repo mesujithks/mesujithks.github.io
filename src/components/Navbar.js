@@ -1,14 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, HashRouter } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Portfolio from "./Portfolio";
 
 const Navbar = () => {
   return (
-    <Router>
+    <HashRouter>
       <nav className="nav-bar">
-        <header id="logo" onClick={()=>window.location.href = '#'}>
+        <header id="logo" onClick={() => (window.location.href = "#")}>
           <h3>
             &lt;/<span>Sujith</span>&gt;
           </h3>
@@ -30,7 +30,7 @@ const Navbar = () => {
             id="nav-btn"
             target="_blank"
             rel="noopener"
-            onClick={()=>window.open('mailto:mesujithks3@gmail.com')}
+            onClick={() => window.open("mailto:mesujithks3@gmail.com")}
           >
             <p>Let's Talk</p>
           </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
           <Home />
         </Route>
       </Switch>
-    </Router>
+    </HashRouter>
   );
 };
 

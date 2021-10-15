@@ -5,34 +5,9 @@ object-assign
 */
 
 /*!
-   * Sizzle CSS Selector Engine v2.3.6
-   * https://sizzlejs.com/
-   *
-   * Copyright JS Foundation and other contributors
-   * Released under the MIT license
-   * https://js.foundation/
-   *
-   * Date: 2021-02-16
-   */
-
-/*!
  * baffle 0.3.6 - A tiny javascript library for obfuscating and revealing text in DOM elements.
  * Copyright (c) 2016 Cam Wiegert <cam@camwiegert.com> - https://camwiegert.github.io/baffle
  * License: MIT
- */
-
-/*!
- * jQuery JavaScript Library v3.6.0
- * https://jquery.com/
- *
- * Includes Sizzle.js
- * https://sizzlejs.com/
- *
- * Copyright OpenJS Foundation and other contributors
- * Released under the MIT license
- * https://jquery.org/license
- *
- * Date: 2021-03-02T17:08Z
  */
 
 /** @license React v0.20.2

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Baffle from "baffle-react";
-import { ajaxSetup } from "jquery";
+
 const Home = () => {
   const [baffleText, setBaffleText] = React.useState("FullStack Developer");
   const [update, setUpdate] = React.useState(true);
@@ -10,7 +10,7 @@ const Home = () => {
     var i = 1;
     let changeTitle = () => {
       let titles = ["FullStack Developer", "Java Developer", "Programmer"];
-      if (i == titles.length) {
+      if (i === titles.length) {
         i = 0;
       }
       setBaffleText(titles[i++]);

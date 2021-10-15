@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="footer">
 
-        <a href="#" className="up-btn-wrapper" alt="Go to top">
+        <div onClick={() => window.scrollTo(0,0) } className="up-btn-wrapper" alt="Go to top">
             <i className="fa fa-angle-up up-btn"></i>
-        </a>
+        </div>
 
 
         <div className="footer-icons">

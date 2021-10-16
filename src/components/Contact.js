@@ -3,15 +3,21 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  const notify = () => toast.info('Sorry! This feature is not enabled. You can contact by mail to mesujithks3@gmail.com', {
-    position: "bottom-center",
-    autoClose: false,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    });
+  const notify = (e) => {
+    e.preventDefault();
+    toast.error(
+      "Sorry! This feature is not enabled. You can contact by mail to mesujithks3@gmail.com",
+      {
+        position: "bottom-center",
+        autoClose: false,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      }
+    );
+  };
 
   return (
     <section className="section contact" id="contact">
@@ -20,7 +26,6 @@ const Contact = () => {
       <div className="contact-wrapper">
         <form
           name="contact"
-          action="/message_send.html"
           className="contact-form"
           netlify-honeypot="bot-field"
           data-netlify="true"
@@ -64,7 +69,11 @@ const Contact = () => {
             id="message"
           ></textarea>
 
-          <button className="submit btn" type="submit" onClick={notify}>
+          <button
+            className="submit btn"
+            type="submit"
+            onClick={(e) => notify(e)}
+          >
             Send Mail
           </button>
         </form>

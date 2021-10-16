@@ -63,10 +63,11 @@ const Navbar = () => {
         <Route path="/home">
           <Home />
         </Route>
+        <Route exact path="/contact"></Route>
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
-        <Redirect from='*' to='/home' />
+        <Redirect from="*" to="/home" />
       </Switch>
     </HashRouter>
   );

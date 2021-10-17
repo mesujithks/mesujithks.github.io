@@ -21,12 +21,12 @@ const About = () => {
       type: 0,
       link: null,
     },
-    {
-      title: "Software Engineer",
-      subTitle: "Techversant : 2021 - Present",
-      type: 1,
-      link: "https://www.techversantinfotech.com/",
-    },
+    // {
+    //   title: "Software Engineer",
+    //   subTitle: "Techversant : 2021 - Present",
+    //   type: 1,
+    //   link: "https://www.techversantinfotech.com/",
+    // },
     {
       title: "Software Developer",
       subTitle: "Interland Technolgy Services : 2019 - 2021",
